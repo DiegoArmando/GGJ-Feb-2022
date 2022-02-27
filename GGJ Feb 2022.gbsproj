@@ -3174,6 +3174,20 @@
                                 "__comment": true
                             },
                             "id": "888001b5-2c49-4b1a-a204-b6fbee723f14"
+                        },
+                        {
+                            "command": "EVENT_SET_TRUE",
+                            "args": {
+                                "variable": "2"
+                            },
+                            "id": "ede74635-c839-4e45-81a5-3457884357f4"
+                        },
+                        {
+                            "command": "EVENT_GBVM_SCRIPT",
+                            "args": {
+                                "script": "VM_REPLACE_TILE_XY      25, 32, ___bank_tileset_0, _tileset_0, 1"
+                            },
+                            "id": "bcbaf3df-278d-4f7a-89f5-42c99758ae1c"
                         }
                     ],
                     "startScript": [],
@@ -3283,9 +3297,9 @@
                     "name": "",
                     "id": "1542ac98-bcb5-4ae5-b230-313ee539defb",
                     "x": 25,
-                    "y": 29,
+                    "y": 31,
                     "width": 13,
-                    "height": 3,
+                    "height": 2,
                     "script": [
                         {
                             "command": "EVENT_IF_TRUE",
@@ -3300,7 +3314,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Yikes! I should fix the bridge first! Otherwise I could fall!"
+                                                "Yikes! I should fix\nthe bridge first!\nOtherwise I could \nfall!"
                                             ],
                                             "avatarId": ""
                                         },
@@ -16453,6 +16467,26 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
+        },
+        {
+            "name": "Tiles Ref",
+            "backgroundId": "9e96177f-5d07-4de2-ad2f-2c6bac68682d",
+            "width": 56,
+            "height": 56,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "6d2d7835-4b83-4462-844f-ee04bce0015f",
+            "x": 378.4,
+            "y": 1037.6,
+            "actors": [],
+            "triggers": [],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
         }
     ],
     "backgrounds": [
@@ -17951,7 +17985,8 @@
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
                         "script": "VM_SET_INT16 ",
-                        "__comment": true
+                        "__comment": true,
+                        "__collapse": true
                     },
                     "id": "16822b10-786b-4f48-89a8-e4e8c4e9467c"
                 }
@@ -18092,9 +18127,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 809,
-        "worldScrollY": 1900,
-        "zoom": 375,
+        "worldScrollX": 0,
+        "worldScrollY": 264,
+        "zoom": 125,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",

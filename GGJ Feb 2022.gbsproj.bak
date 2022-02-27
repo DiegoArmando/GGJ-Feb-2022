@@ -1830,19 +1830,19 @@
                 15,
                 15,
                 15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
                 15,
                 15,
                 15,
@@ -3170,9 +3170,24 @@
                         {
                             "command": "EVENT_CALL_CUSTOM_EVENT",
                             "args": {
-                                "customEventId": "13aa1a73-76ff-487f-a6fe-860e22de525a"
+                                "customEventId": "13aa1a73-76ff-487f-a6fe-860e22de525a",
+                                "__comment": true
                             },
                             "id": "888001b5-2c49-4b1a-a204-b6fbee723f14"
+                        },
+                        {
+                            "command": "EVENT_SET_TRUE",
+                            "args": {
+                                "variable": "2"
+                            },
+                            "id": "ede74635-c839-4e45-81a5-3457884357f4"
+                        },
+                        {
+                            "command": "EVENT_GBVM_SCRIPT",
+                            "args": {
+                                "script": "VM_REPLACE_TILE_XY      25, 32, ___bank_tileset_0, _tileset_0, 3"
+                            },
+                            "id": "bcbaf3df-278d-4f7a-89f5-42c99758ae1c"
                         }
                     ],
                     "startScript": [],
@@ -3274,6 +3289,55 @@
                                 }
                             },
                             "id": "e46b824d-b268-44a3-96fc-3a043f6553b1"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "1542ac98-bcb5-4ae5-b230-313ee539defb",
+                    "x": 25,
+                    "y": 31,
+                    "width": 13,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "2",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Yikes! I should fix\nthe bridge first!\nOtherwise I could \nfall!"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "f2d77c14-53e1-4da8-91a1-0ea8d11302e0"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_SET_POSITION",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "x": {
+                                                "type": "variable",
+                                                "value": "0"
+                                            },
+                                            "y": {
+                                                "type": "variable",
+                                                "value": "1"
+                                            }
+                                        },
+                                        "id": "e57f6119-5298-43d2-9894-aa10f32a8e9c"
+                                    }
+                                ]
+                            },
+                            "id": "b1edd476-1f3b-42f1-b309-70c88d0b56b4"
                         }
                     ],
                     "leaveScript": []
@@ -16403,6 +16467,26 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
+        },
+        {
+            "name": "Tiles Ref",
+            "backgroundId": "9e96177f-5d07-4de2-ad2f-2c6bac68682d",
+            "width": 56,
+            "height": 56,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "6d2d7835-4b83-4462-844f-ee04bce0015f",
+            "x": 378.4,
+            "y": 1037.6,
+            "actors": [],
+            "triggers": [],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
         }
     ],
     "backgrounds": [
@@ -17900,7 +17984,9 @@
                 {
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
-                        "script": "VM_SET_INT16 "
+                        "script": "VM_SET_INT16 ",
+                        "__comment": true,
+                        "__collapse": true
                     },
                     "id": "16822b10-786b-4f48-89a8-e4e8c4e9467c"
                 }
@@ -18020,6 +18106,10 @@
         {
             "id": "1",
             "name": "Respawn Y"
+        },
+        {
+            "id": "2",
+            "name": "Bridge A Fixed"
         }
     ],
     "engineFieldValues": [
@@ -18037,9 +18127,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 64,
-        "worldScrollY": 674,
-        "zoom": 175,
+        "worldScrollX": 0,
+        "worldScrollY": 264,
+        "zoom": 125,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
