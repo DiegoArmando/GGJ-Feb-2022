@@ -6988,9 +6988,25 @@
                                     {
                                         "command": "EVENT_GBVM_SCRIPT",
                                         "args": {
-                                            "script": "VM_PUSH_CONST ^/(29*8)/\nVM_PUSH_CONST ^/(44*8)/\n\nVM_CAMERA_MOVE_TO .ARG1, 0, .CAMERA_UNLOCK\n\nVM_POP 2"
+                                            "script": "VM_PUSH_CONST ^/(29*8)/\nVM_PUSH_CONST ^/(44*8)/\n\nVM_CAMERA_MOVE_TO .ARG1, 0, .CAMERA_UNLOCK\n\nVM_POP 2",
+                                            "__comment": true
                                         },
                                         "id": "6873bff5-4a4b-4407-9475-6fd1d31060b3"
+                                    },
+                                    {
+                                        "command": "EVENT_CAMERA_MOVE_TO",
+                                        "args": {
+                                            "x": {
+                                                "type": "number",
+                                                "value": 20
+                                            },
+                                            "y": {
+                                                "type": "number",
+                                                "value": 35
+                                            },
+                                            "speed": 0
+                                        },
+                                        "id": "b2ec3a57-b5a9-4849-9c4a-9c3e8c5b95f7"
                                     }
                                 ],
                                 "false": []
@@ -7020,14 +7036,118 @@
                                     {
                                         "command": "EVENT_GBVM_SCRIPT",
                                         "args": {
-                                            "script": "VM_PUSH_CONST ^/(10*8)/\nVM_PUSH_CONST ^/(44*8)/\n\nVM_CAMERA_MOVE_TO .ARG1, 0, .CAMERA_UNLOCK\n\nVM_POP 2"
+                                            "script": "VM_PUSH_CONST ^/(10*8)/\nVM_PUSH_CONST ^/(44*8)/\n\nVM_CAMERA_MOVE_TO .ARG1, 0, .CAMERA_UNLOCK\n\nVM_POP 2",
+                                            "__comment": true
                                         },
                                         "id": "48908348-7d6c-4d09-a83e-ac1dd6b8e20f"
+                                    },
+                                    {
+                                        "command": "EVENT_CAMERA_MOVE_TO",
+                                        "args": {
+                                            "x": {
+                                                "type": "number",
+                                                "value": 0
+                                            },
+                                            "y": {
+                                                "type": "number",
+                                                "value": 35
+                                            },
+                                            "speed": 0
+                                        },
+                                        "id": "29c9eba0-37d4-409f-ae85-489362050f58"
                                     }
                                 ],
                                 "false": []
                             },
                             "id": "c6c5e96e-caff-4251-b89d-d1b6ff4c648b"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "90554633-08b9-4e79-865c-188973acf941",
+                    "x": 41,
+                    "y": 37,
+                    "width": 1,
+                    "height": 10,
+                    "script": [
+                        {
+                            "command": "EVENT_IF_ACTOR_DIRECTION",
+                            "args": {
+                                "actorId": "$self$",
+                                "direction": "right",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CAMERA_MOVE_TO",
+                                        "args": {
+                                            "x": {
+                                                "type": "number",
+                                                "value": 41
+                                            },
+                                            "y": {
+                                                "type": "number",
+                                                "value": 35
+                                            },
+                                            "speed": 0
+                                        },
+                                        "id": "b6085d82-d0b5-4b65-9501-a4faaef4d081"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "8c00c1be-6fc2-4589-b6f0-697dc9351111"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "099fade2-ba08-4a53-8439-44e4d78556b6",
+                    "x": 40,
+                    "y": 37,
+                    "width": 1,
+                    "height": 10,
+                    "script": [
+                        {
+                            "command": "EVENT_IF_ACTOR_DIRECTION",
+                            "args": {
+                                "actorId": "$self$",
+                                "direction": "left",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_GBVM_SCRIPT",
+                                        "args": {
+                                            "script": "VM_PUSH_CONST ^/(29*8)/\nVM_PUSH_CONST ^/(44*8)/\n\nVM_CAMERA_MOVE_TO .ARG1, 0, .CAMERA_UNLOCK\n\nVM_POP 2",
+                                            "__comment": true
+                                        },
+                                        "id": "803d987b-9133-48b1-8eef-ff409d94789e"
+                                    },
+                                    {
+                                        "command": "EVENT_CAMERA_MOVE_TO",
+                                        "args": {
+                                            "x": {
+                                                "type": "number",
+                                                "value": 20
+                                            },
+                                            "y": {
+                                                "type": "number",
+                                                "value": 35
+                                            },
+                                            "speed": 0
+                                        },
+                                        "id": "e742cf4f-a56b-46b6-a385-a78ff18d918d"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "eb669e75-2d10-471b-9033-4b2f42a4c077"
                         }
                     ],
                     "leaveScript": []
@@ -10506,8 +10626,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 2406,
-        "worldScrollY": 1899,
+        "worldScrollX": 2663,
+        "worldScrollY": 1895,
         "zoom": 311.2012520506978,
         "customColorsEnabled": true,
         "sgbEnabled": false,
