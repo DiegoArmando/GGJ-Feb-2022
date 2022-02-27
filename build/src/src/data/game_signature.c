@@ -1,1 +1,1 @@
-const unsigned long save_signature = 0x636D073A;
+const unsigned long save_signature = 0x79249EE7;
