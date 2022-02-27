@@ -1,7 +1,7 @@
 #ifndef SCENE_0_ACTORS_H
 #define SCENE_0_ACTORS_H
 
-// Scene: Scene 1
+// Scene: Level
 // Actors
 
 #include "gbs_types.h"

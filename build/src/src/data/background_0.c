@@ -1,6 +1,6 @@
 #pragma bank 255
 
-// Background: !Tiles
+// Background: sample_town_2
 
 #include "gbs_types.h"
 #include "data/tileset_0.h"

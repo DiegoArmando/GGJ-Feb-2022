@@ -1,9 +1,9 @@
 #pragma bank 255
 
-// Scene: Scene 1
+// Scene: Level
 
 #include "gbs_types.h"
-#include "data/background_1.h"
+#include "data/background_0.h"
 #include "data/scene_0_collisions.h"
 #include "data/palette_0.h"
 #include "data/palette_1.h"
@@ -19,7 +19,7 @@ const struct scene_t scene_0 = {
     .width = 56,
     .height = 56,
     .type = SCENE_TYPE_PLATFORM,
-    .background = TO_FAR_PTR_T(background_1),
+    .background = TO_FAR_PTR_T(background_0),
     .collisions = TO_FAR_PTR_T(scene_0_collisions),
     .parallax_rows = {
         PARALLAX_STEP(0,0,0)

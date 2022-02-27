@@ -1,6 +1,6 @@
 #pragma bank 255
 
-// Scene: Scene 1
+// Scene: Level
 // Actors
 
 #include "gbs_types.h"
@@ -13,8 +13,8 @@ const struct actor_t scene_0_actors[] = {
     {
         // Actor 1,
         .pos = {
-            .x = 56 * 16,
-            .y = 416 * 16
+            .x = 216 * 16,
+            .y = 216 * 16
         },
         .bounds = {
             .left = 0,
@@ -25,7 +25,7 @@ const struct actor_t scene_0_actors[] = {
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(spritesheet_1),
         .move_speed = 16,
-        .anim_tick = 255,
+        .anim_tick = 15,
         .pinned = FALSE,
         .collision_group = COLLISION_GROUP_NONE,
         .collision_enabled = TRUE,

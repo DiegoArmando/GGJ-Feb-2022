@@ -1,7 +1,7 @@
 #ifndef SCENE_0_SPRITES_H
 #define SCENE_0_SPRITES_H
 
-// Scene: Scene 1
+// Scene: Level
 // Sprites
 
 #include "gbs_types.h"

@@ -13,9 +13,8 @@ ___bank_script_s0a0_interact = 255
 _script_s0a0_interact::
         VM_LOCK
 
-        VM_PUSH_CONST         2
-        VM_REPLACE_TILE_XY    19,54,___bank_tileset_0, _tileset_0, .ARG0
-        VM_POP                1
+        ; Call Script: Create Bridge
+        VM_CALL_FAR             ___bank_script_create_bridge, _script_create_bridge
 
         ; Stop Script
         VM_STOP

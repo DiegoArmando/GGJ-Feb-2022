@@ -1,6 +1,6 @@
 #pragma bank 255
 
-// Scene: Scene 1
+// Scene: Level
 // Triggers
 
 #include "gbs_types.h"
@@ -13,17 +13,17 @@ BANKREF(scene_0_triggers)
 const struct trigger_t scene_0_triggers[] = {
     {
         // Trigger 1,
-        .x = 19,
-        .y = 55,
-        .width = 8,
+        .x = 25,
+        .y = 33,
+        .width = 13,
         .height = 1,
         .script = TO_FAR_PTR_T(script_s0t0_interact),
         .script_flags = TRIGGER_HAS_ENTER_SCRIPT
     },
     {
         // Trigger 2,
-        .x = 15,
-        .y = 52,
+        .x = 21,
+        .y = 30,
         .width = 2,
         .height = 2,
         .script = TO_FAR_PTR_T(script_s0t1_interact),
@@ -31,8 +31,8 @@ const struct trigger_t scene_0_triggers[] = {
     },
     {
         // Trigger 3,
-        .x = 29,
-        .y = 52,
+        .x = 40,
+        .y = 30,
         .width = 2,
         .height = 2,
         .script = TO_FAR_PTR_T(script_s0t2_interact),
